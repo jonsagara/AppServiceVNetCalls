@@ -1,0 +1,21 @@
+﻿@using System.Runtime.InteropServices
+@{
+    ViewData["Title"] = "Home Page";
+
+    var frameworkDescription = $"{RuntimeInformation.FrameworkDescription}, {RuntimeInformation.ProcessArchitecture}";
+}
+
+<div>
+
+    <h4><code>HttpClient</code> request to an Azure VNet vs. a request to <code>httpbin.org</code></h4>
+
+    <ul>
+        <li><a asp-action="VNetRequest" asp-controller="Home">HttpClient GET to VNET</a></li>
+        <li><a asp-action="NonVNetRequest" asp-controller="Home">HttpClient GET to httpbin.org</a></li>
+    </ul>
+
+    <p>
+        <code>@frameworkDescription</code>
+    </p>
+
+</div>
